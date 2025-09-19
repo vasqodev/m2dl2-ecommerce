@@ -1,0 +1,131 @@
+/* Estilos generales */
+
+body {
+  margin: 0;
+  font-family: 'Segoe UI', sans-serif;
+  background-color: #8aa5b7;
+}
+
+.container {
+  display: grid;
+  grid-template-areas:
+    "header header"
+    "sidebar main"
+    "footer footer";
+  grid-template-columns: 250px 1fr;
+  grid-template-rows: auto 1fr auto;
+  min-height: 100vh;
+}
+
+/* Header */
+.header {
+  grid-area: header;
+  background-color: #224459;
+  color: #fff;
+  padding: 1rem;
+  text-align: center;
+}
+
+.nav-menu {
+  list-style: none;
+  display: flex;
+  gap: 1rem;
+  padding: 0;
+  margin: 0.5rem 0 0 0;
+}
+
+.nav-menu li a {
+  color: white;
+  text-decoration: none;
+}
+
+/* Menu lateral */
+.sidebar {
+  grid-area: sidebar;
+  background-color: #658da6;
+  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+  color: whitesmoke;
+}
+
+.category-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.category-list li {
+  margin: 0.5rem 0;
+}
+
+/* Grilla de productos */
+
+.product-grid {
+  grid-area: main;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1rem;
+  padding: 1rem;
+}
+
+/* Card producto */
+
+.product-card {
+  background-color: white;
+  border: 1px solid #224459;
+  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  gap: 0.5rem;
+}
+
+.product-card h3 {
+  margin: 0;
+  font-size: 1.1rem;
+  color: #333;
+}
+
+.product-card p {
+  margin: 0;
+  font-weight: bold;
+  color: #224459;
+}
+
+.product-card img {
+  width: 200px;
+  height: 200px;
+  object-fit: cover;
+  margin-bottom: 0.5rem;
+  border-radius: 6px;
+}
+
+/* Footer */
+
+.footer {
+  grid-area: footer;
+  background-color: #224459;
+  color: white;
+  text-align: center;
+  padding: 1rem;
+}
+
+/* Estilos para el botón de compra */
+
+.buy-button {
+  margin-top: auto;
+  padding: 0.5rem 1rem;
+  background-color: #224459;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-weight: bold;
+  transition: background-color 0.3s ease;
+}
+
+.buy-button:hover {
+  background-color: #8aa5b7;
+}
